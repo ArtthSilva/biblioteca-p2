@@ -24,6 +24,7 @@ public class BibliotecaController {
         this.funcionarioModels = new ArrayList<>();
     }
 
+
     public void adicionarCliente(String nome) {
         int novoId = clienteModels.size() +1;
         ClienteModel novoClienteModel = new ClienteModel(nome, novoId);
@@ -56,9 +57,11 @@ public class BibliotecaController {
         return this.livros;
     }
 
-    public List<ClienteModel> getClientes() {
+    public List<ClienteModel> getClientesComLivrosEmprestados() {
         return this.clientesComLivrosEmprestados;
     }
+
+    public List<ClienteModel> getClientes(){return this.clienteModels;}
 
     public List<AtendenteModel> getAtendentes(){return this.funcionarioModels;}
 

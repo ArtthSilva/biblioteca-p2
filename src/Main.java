@@ -64,8 +64,9 @@ public class Main {
 
 
         } while (opcao != 5);
-        view.mostrarClientesComLivrosEmprestados(controller.getClientes());
+        view.mostrarClientesComLivrosEmprestados(controller.getClientesComLivrosEmprestados());
         view.mostrarLivros(controller.getLivros());
         view.mostrarFuncionarios(controller.getAtendentes());
+        view.mostrarClientes(controller.getClientes());
     }
 }

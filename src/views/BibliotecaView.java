@@ -8,7 +8,7 @@ import models.LivroModel;
 import java.util.List;
 
 public class BibliotecaView {
-    public void mostrarLivros(List<LivroModel> livros) {
+    public  static void mostrarLivros(List<LivroModel> livros) {
         System.out.println("Livros:");
         for (LivroModel livro : livros) {
             String status = livro.isEmprestado() ? "Emprestado" : "Disponível";
@@ -17,7 +17,7 @@ public class BibliotecaView {
         System.out.println();
     }
 
-    public void mostrarClientes(List<ClienteModel> clientes) {
+    public static void mostrarClientes(List<ClienteModel> clientes) {
         System.out.println("Clientes:");
         for (ClienteModel cliente : clientes) {
             System.out.println("ID: " + cliente.getId() + ", Nome: " + cliente.getNome());
@@ -25,7 +25,7 @@ public class BibliotecaView {
         System.out.println();
     }
 
-    public void mostrarFuncionarios(List<AtendenteModel> funcionarios) {
+    public static void mostrarFuncionarios(List<AtendenteModel> funcionarios) {
         System.out.println("Funcionários:");
         for (AtendenteModel funcionario : funcionarios) {
             System.out.println("ID: " + funcionario.getId() + ", Nome: " + funcionario.getNome());
@@ -33,7 +33,7 @@ public class BibliotecaView {
         System.out.println();
     }
 
-    public void mostrarClientesComLivrosEmprestados(List<ClienteModel> clientes) {
+    public static void mostrarClientesComLivrosEmprestados(List<ClienteModel> clientes) {
         System.out.println("Clientes com livros emprestados:");
         for (ClienteModel cliente : clientes) {
             System.out.println("ID: " + cliente.getId() + ", Nome: " + cliente.getNome());

@@ -1,18 +1,21 @@
 package models;
 
-public class ClienteModel {
-    private String nome;
-    private int id;
+public class ClienteModel implements Pessoa{
+    private final String nome;
+    private final int id;
 
     public ClienteModel(String nome, int id) {
         this.nome = nome;
         this.id = id;
     }
 
+
+    @Override
     public String getNome() {
         return nome;
     }
 
+    @Override
     public int getId() {
         return id;
     }
