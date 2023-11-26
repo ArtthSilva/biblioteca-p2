@@ -1,8 +1,9 @@
 package views;
 
+import models.AtendenteModel;
 import models.ClienteModel;
 import models.LivroModel;
-import models.FuncionarioModel;
+
 
 import java.util.List;
 
@@ -24,9 +25,9 @@ public class BibliotecaView {
         System.out.println();
     }
 
-    public void mostrarFuncionarios(List<FuncionarioModel> funcionarios) {
+    public void mostrarFuncionarios(List<AtendenteModel> funcionarios) {
         System.out.println("Funcionários:");
-        for (FuncionarioModel funcionario : funcionarios) {
+        for (AtendenteModel funcionario : funcionarios) {
             System.out.println("ID: " + funcionario.getId() + ", Nome: " + funcionario.getNome());
         }
         System.out.println();

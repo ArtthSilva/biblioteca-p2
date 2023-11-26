@@ -28,19 +28,5 @@ public class LivroModel {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public int getQntPaginas() {
-        return qntPaginas;
-    }
-
-    public void setQntPaginas(int qntPaginas) {
-        this.qntPaginas = qntPaginas;
-    }
 }

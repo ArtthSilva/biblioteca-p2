@@ -1,7 +1,8 @@
 package controllers;
 
+import models.AtendenteModel;
 import models.ClienteModel;
-import models.FuncionarioModel;
+
 import models.LivroModel;
 import views.BibliotecaView;
 
@@ -10,7 +11,7 @@ import java.util.List;
 
 public class BibliotecaController {
     private List<ClienteModel> clienteModels;
-    private List <FuncionarioModel> funcionarioModels;
+    private List<AtendenteModel> funcionarioModels;
     private List<LivroModel> livros;
     private List<ClienteModel> clientesComLivrosEmprestados;
     private BibliotecaView view;
@@ -20,6 +21,7 @@ public class BibliotecaController {
         this.livros = new ArrayList<>();
         this.clientesComLivrosEmprestados = new ArrayList<>();
         this.view = new BibliotecaView();
+        this.funcionarioModels = new ArrayList<>();
     }
 
     public void adicionarCliente(String nome) {
@@ -28,9 +30,9 @@ public class BibliotecaController {
         clienteModels.add(novoClienteModel);
     }
 
-    public void adicionarFuncionario(String nome) {
+    public void adicionarFuncionario(int idade, int cpf, String nome) {
         int novoId = funcionarioModels.size() +1;
-        FuncionarioModel novoFuncionarioModel = new FuncionarioModel(nome, novoId);
+        AtendenteModel novoFuncionarioModel = new AtendenteModel(idade, cpf, nome, novoId);
         funcionarioModels.add(novoFuncionarioModel);
     }
 
@@ -58,6 +60,8 @@ public class BibliotecaController {
         return this.clientesComLivrosEmprestados;
     }
 
+    public List<AtendenteModel> getAtendentes(){return this.funcionarioModels;}
+
     private LivroModel procurarLivroPorId(int id) {
         return livros.stream().filter(livro -> livro.getId() == id).findFirst().orElse(null);
     }
@@ -66,7 +70,7 @@ public class BibliotecaController {
         return clienteModels.stream().filter(clienteModel -> clienteModel.getId() == id).findFirst().orElse(null);
     }
 
-    private FuncionarioModel procurarFuncionarioPorId(int id) {
+    private AtendenteModel procurarFuncionarioPorId(int id) {
         return funcionarioModels.stream().filter(funcionarioModel -> funcionarioModel.getId() == id).findFirst().orElse(null);
     }
 }
