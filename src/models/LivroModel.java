@@ -1,8 +1,7 @@
 package models;
 
-public class LivroModel {
+public class LivroModel implements Emprestavel{
     private String nome;
-    private int qntPaginas;
     private boolean emprestado;
     private int id;
 
@@ -11,7 +10,10 @@ public class LivroModel {
         this.id = id;
         this.emprestado = false;
     }
-
+    @Override
+    public void emprestar() {
+        this.emprestado = true;
+    }
     public String getNome() {
         return nome;
     }
@@ -27,6 +29,7 @@ public class LivroModel {
     public int getId() {
         return id;
     }
+
 
 
 }

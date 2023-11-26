@@ -47,7 +47,7 @@ public class BibliotecaController {
         ClienteModel clienteModel = procurarClientePorId(idCliente);
 
         if (livro != null && clienteModel != null && !livro.isEmprestado()) {
-            livro.setEmprestado(true);
+            livro.emprestar();
             clientesComLivrosEmprestados.add(clienteModel);
         }
     }
