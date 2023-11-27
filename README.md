@@ -7,7 +7,7 @@ Este projeto propõe uma solução abrangente para otimizar a gestão de bibliot
   
   <h4>Arthur Pereira </h4>
   <h4>Cimário Medeiros </h4>
-  <h4>Gustavo Carreira </h4>
+  <h4>Luiz Gustavo </h4>
   <h4>Michel Nóbrega </h4>
 
 
