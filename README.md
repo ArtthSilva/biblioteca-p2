@@ -25,7 +25,7 @@ Este projeto propõe uma solução abrangente para otimizar a gestão de bibliot
    - Entre no diretório:
    $ cd biblioteca-projeto
 
-   - Agora você já deve estar dentro do projeto 😁:
+   - Agora você já deve estar dentro do projeto 😁
 
 - Foi utilizada a versão 17 do Java
    ```
